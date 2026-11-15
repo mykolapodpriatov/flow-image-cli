@@ -333,7 +333,7 @@ wheels = [
 
 [[package]]
 name = "flow-cli"
-version = "1.5.0"
+version = "1.5.1"
 source = { editable = "." }
 dependencies = [
     { name = "curl-cffi" },
@@ -352,7 +352,7 @@ dev = [
 requires-dist = [
     { name = "black", marker = "extra == 'dev'", specifier = ">=23.0.0" },
     { name = "curl-cffi", specifier = ">=0.7.0" },
-    { name = "gflow-cli", specifier = ">=0.96.1,<0.97.0" },
+    { name = "gflow-cli", specifier = ">=0.96.1,<0.101.0" },
     { name = "pillow", specifier = ">=9.0.0" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
     { name = "tomli", specifier = ">=2.0.0" },
@@ -361,7 +361,7 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "gflow-cli"
-version = "0.96.1"
+version = "0.100.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "browser-cookie3" },
@@ -380,9 +380,9 @@ dependencies = [
     { name = "tenacity" },
     { name = "uvicorn", extra = ["standard"] },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d0/23/5056a35f083d847e2843fc99344d0659a327045029dd37aa2635f9c34fcc/gflow_cli-0.96.1.tar.gz", hash = "sha256:ed7aab76ab6af61c7f8bd09db96ade7559afdbdb963357ab2919d0fb346af0c6", size = 6748202, upload-time = "2026-11-08T05:26:07.666Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/be/ee/c07eeef3b7f2482322f1912a734f9bc38dcaa572d7e56718535289398ee5/gflow_cli-0.100.0.tar.gz", hash = "sha256:5b50c663dc453a1f8b701c30c62a7b9be71eca3623a7b4c2c1cac7dab8e690d6", size = 7227620, upload-time = "2026-11-15T15:06:29.183Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fe/28/74385339aae2d9bbfd15ff5a0b16ac14350ead71cc2edfc04b0028aecf8b/gflow_cli-0.96.1-py3-none-any.whl", hash = "sha256:a27d6b3e6e65bbea6426a4a86a93528fd19c360e7eee5521b8b16546789adf46", size = 1644675, upload-time = "2026-11-08T05:26:05.296Z" },
+    { url = "https://files.pythonhosted.org/packages/8b/86/e1509f4784888dad8bbe0482fbd24325cfda86b5bb7338f77aeabacb85a8/gflow_cli-0.100.0-py3-none-any.whl", hash = "sha256:7ea9adffbb8e040084ba8e9fe34e7ab011ecbc9705ee7000f74664a1c5a37844", size = 1802993, upload-time = "2026-11-15T15:06:26.69Z" },
 ]
 
 [[package]]

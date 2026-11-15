@@ -15,7 +15,7 @@ A local CLI for generating Google Flow images and videos directly from a termina
 - Chrome token extension with a prefilled local server URL and health check
 - 2K / 4K image upscaling with original-image fallback
 
-Version 1.5.0 depends on gflow-cli 0.96.1 and adds the new Omni 1.2 Flash video model (`omni-1.2-flash`, 3-15 seconds). Image-to-video from a local image works on the migrated `flow.google.com` host.
+Version 1.5.1 accepts gflow-cli 0.96.1 through 0.100.0. Version 1.5.0 added Omni 1.2 Flash (`omni-1.2-flash`, 3-15 seconds). Image-to-video from a local image works on the migrated `flow.google.com` host.
 
 New in 1.5.0:
 
@@ -101,7 +101,7 @@ Clearing the setting does not delete the project in Flow. The setting is stored 
 
 Google is moving Flow from `https://labs.google/fx/tools/flow` to `https://flow.google.com`.
 
-gflow-cli 0.67 could only run text-to-video on the new site. Image-to-video failed before submit with `FlowHostMigratedError` (exit 36). That path is fixed in gflow-cli 0.85+. This release requires `gflow-cli>=0.96.1,<0.97.0`, so local image-to-video runs on `flow.google.com`.
+gflow-cli 0.67 could only run text-to-video on the new site. Image-to-video failed before submit with `FlowHostMigratedError` (exit 36). That path is fixed in gflow-cli 0.85+. This release requires `gflow-cli>=0.96.1,<0.101.0`, so local image-to-video runs on `flow.google.com`. gflow-cli 0.100.0 still misreads the Chinese credit gate and still blocks Omni 1.2 on the agent-only composer, so the launch patch stays.
 
 For a migrated account, start with `flow-cli auth status`, `flow-cli project show`, and an existing project. The migrated image path reuses the local browser login saved by `flow-cli auth login --browser chrome`; no manual token copy is needed.
 

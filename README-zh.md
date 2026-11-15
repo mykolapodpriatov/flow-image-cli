@@ -15,7 +15,7 @@ English README: [README.md](./README.md)
 - Chrome Token 插件默认连接本机服务并自动检查在线状态
 - 图片 2K / 4K 放大，失败时保底保存原图
 
-v1.5.0 依赖 gflow-cli 0.96.1，新增 Flow 最新的 Omni 1.2 Flash 视频模型（`omni-1.2-flash`，3-15 秒）。在迁移后的 `flow.google.com` 上，本地图片的图生视频可用。
+v1.5.1 接受 gflow-cli 0.96.1 到 0.100.0。v1.5.0 新增 Flow 最新的 Omni 1.2 Flash 视频模型（`omni-1.2-flash`，3-15 秒）。在迁移后的 `flow.google.com` 上，本地图片的图生视频可用。
 
 1.5.0 新增：
 
@@ -103,7 +103,7 @@ flow-cli project clear
 
 Google 正在把 Flow 从 `https://labs.google/fx/tools/flow` 迁到 `https://flow.google.com`。
 
-gflow-cli 0.67 在新网址上只能做文生视频。图生视频会在提交前失败，错误是 `FlowHostMigratedError`，退出码 36。这个缺口在 gflow-cli 0.85+ 修好了。本版本要求 `gflow-cli>=0.96.1,<0.97.0`，因此本地图片的图生视频可以在 `flow.google.com` 上运行。
+gflow-cli 0.67 在新网址上只能做文生视频。图生视频会在提交前失败，错误是 `FlowHostMigratedError`，退出码 36。这个缺口在 gflow-cli 0.85+ 修好了。本版本要求 `gflow-cli>=0.96.1,<0.101.0`，因此本地图片的图生视频可以在 `flow.google.com` 上运行。gflow-cli 0.100.0 仍会误读中文扣费确认框，也仍会在 agent-only 编辑器上拒绝 Omni 1.2，所以启动补丁继续保留。
 
 迁移账号应先运行 `flow-cli auth status` 和 `flow-cli project show`，并使用一个已经存在的项目。新版文生图会直接复用 `flow-cli auth login --browser chrome` 保存的本机登录状态，不需要手工复制 Token。
 

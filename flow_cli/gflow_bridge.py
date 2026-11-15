@@ -21,7 +21,7 @@ _GENERATION_COMMANDS = {
     "video": {"t2v", "i2v", "r2v", "extend"},
 }
 GFLOW_CLI_MIN_VERSION = "0.96.1"
-GFLOW_CLI_MAX_VERSION = "0.97.0"
+GFLOW_CLI_MAX_VERSION = "0.101.0"
 _VERSION_PATTERN = re.compile(r"^(\d+)\.(\d+)\.(\d+)(?:\+[0-9A-Za-z.-]+)?$")
 
 

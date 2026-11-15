@@ -52,14 +52,22 @@ class GflowBridgeTests(unittest.TestCase):
 
         self.assertEqual(result, 2)
         self.assertIn("0.67.0", output.getvalue())
-        self.assertIn(">=0.96.1,<0.97.0", output.getvalue())
+        self.assertIn(">=0.96.1,<0.101.0", output.getvalue())
         run.assert_not_called()
+
+    @patch("flow_cli.gflow_bridge.importlib.util.find_spec", return_value=object())
+    @patch(
+        "flow_cli.gflow_bridge.get_installed_gflow_version",
+        return_value="0.100.0",
+    )
+    def test_gflow_0_100_is_accepted(self, _version, _find_spec):
+        self.assertEqual(check_gflow_compatibility(), (True, None))
 
     @patch("flow_cli.gflow_bridge.subprocess.run")
     @patch("flow_cli.gflow_bridge.importlib.util.find_spec", return_value=object())
     @patch(
         "flow_cli.gflow_bridge.get_installed_gflow_version",
-        return_value="0.97.0",
+        return_value="0.101.0",
     )
     def test_next_minor_is_rejected_without_running_upstream(
         self, _version, _find_spec, run
@@ -69,8 +77,8 @@ class GflowBridgeTests(unittest.TestCase):
             result = run_gflow("video", ["t2v", "test"])
 
         self.assertEqual(result, 2)
-        self.assertIn("0.97.0", output.getvalue())
-        self.assertIn(">=0.96.1,<0.97.0", output.getvalue())
+        self.assertIn("0.101.0", output.getvalue())
+        self.assertIn(">=0.96.1,<0.101.0", output.getvalue())
         run.assert_not_called()
 
     @patch("flow_cli.gflow_bridge.subprocess.run")
